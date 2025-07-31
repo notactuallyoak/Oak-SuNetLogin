@@ -36,6 +36,8 @@ def Login(username, password):
     options.add_argument("--log-level=3")  # only fatal errors
     options.add_argument(f"user-agent={Get_Random_User_Agent()}")
 
+    service.creationflags = 0x08000000  # Hide console on Windows
+
     # apply services
     driver = webdriver.Chrome(service=service, options=options)
     
@@ -146,4 +148,5 @@ if __name__ == "__main__":
     # Handle window close
     app.protocol("WM_DELETE_WINDOW", On_Close)
 
+    # initialize ui
     app.mainloop()

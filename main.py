@@ -5,6 +5,8 @@ import random
 import threading
 import customtkinter as ctk
 
+from Utils.data import save, load
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
